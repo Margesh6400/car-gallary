@@ -74,6 +74,7 @@ export const wallpapers: Wallpaper[] = [
     imageUrl: 'https://images.pexels.com/photos/2127039/pexels-photo-2127039.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
     views: 5243,
     likes: 843,
+    downloads: 2156,
     featured: true,
     dateAdded: 'April 12, 2023',
     resolution: '2400 × 1600'
@@ -89,6 +90,7 @@ export const wallpapers: Wallpaper[] = [
     imageUrl: 'https://images.pexels.com/photos/1073695/pexels-photo-1073695.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
     views: 4127,
     likes: 736,
+    downloads: 1890,
     featured: false,
     dateAdded: 'May 3, 2023',
     resolution: '2000 × 1333'
@@ -104,6 +106,7 @@ export const wallpapers: Wallpaper[] = [
     imageUrl: 'https://images.pexels.com/photos/1213294/pexels-photo-1213294.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
     views: 6012,
     likes: 924,
+    downloads: 2301,
     featured: true,
     dateAdded: 'March 17, 2023',
     resolution: '2400 × 1600'
@@ -121,6 +124,7 @@ export const wallpapers: Wallpaper[] = [
     imageUrl: 'https://images.pexels.com/photos/892522/pexels-photo-892522.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
     views: 7865,
     likes: 1243,
+    downloads: 3102,
     featured: true,
     dateAdded: 'June 8, 2023',
     resolution: '2560 × 1707'
@@ -136,6 +140,7 @@ export const wallpapers: Wallpaper[] = [
     imageUrl: 'https://images.pexels.com/photos/3608542/pexels-photo-3608542.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
     views: 5632,
     likes: 897,
+    downloads: 2789,
     featured: false,
     dateAdded: 'July 22, 2023',
     resolution: '2400 × 1600'
@@ -151,8 +156,25 @@ export const wallpapers: Wallpaper[] = [
     imageUrl: 'https://images.pexels.com/photos/1335077/pexels-photo-1335077.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
     views: 4912,
     likes: 802,
+    downloads: 2450,
     featured: true,
     dateAdded: 'August 5, 2023',
+    resolution: '2560 × 1707'
+  },
+  {
+    id: 'german-4',
+    title: 'Modern Performance Coupe',
+    make: 'Mercedes-Benz',
+    model: 'AMG GT R',
+    year: 2023,
+    category: 'German',
+    categoryId: 'german',
+    imageUrl: 'https://sdmntprsouthcentralus.oaiusercontent.com/files/00000000-7fe0-61f7-a6ab-97872909e84f/raw?se=2025-05-08T14%3A06%3A05Z&sp=r&sv=2024-08-04&sr=b&scid=00000000-0000-0000-0000-000000000000&skoid=61180a4f-34a9-42b7-b76d-9ca47d89946d&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-05-08T12%3A45%3A55Z&ske=2025-05-09T12%3A45%3A55Z&sks=b&skv=2024-08-04&sig=F3jkVr2yLGqcYO03WJFjhcGVBjGaTUGxDwfTLG6NoPE%3D',
+    views: 4521,
+    likes: 892,
+    downloads: 1756,
+    featured: true,
+    dateAdded: 'May 8, 2023',
     resolution: '2560 × 1707'
   },
   
@@ -168,6 +190,7 @@ export const wallpapers: Wallpaper[] = [
     imageUrl: 'https://images.pexels.com/photos/3802510/pexels-photo-3802510.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
     views: 9543,
     likes: 1876,
+    downloads: 3501,
     featured: true,
     dateAdded: 'February 14, 2023',
     resolution: '2800 × 1867'
@@ -183,6 +206,7 @@ export const wallpapers: Wallpaper[] = [
     imageUrl: 'https://images.pexels.com/photos/3422964/pexels-photo-3422964.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
     views: 8762,
     likes: 1543,
+    downloads: 2890,
     featured: true,
     dateAdded: 'January 30, 2023',
     resolution: '2560 × 1707'
@@ -198,6 +222,7 @@ export const wallpapers: Wallpaper[] = [
     imageUrl: 'https://images.pexels.com/photos/3136673/pexels-photo-3136673.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
     views: 7621,
     likes: 1342,
+    downloads: 3105,
     featured: false,
     dateAdded: 'May 17, 2023',
     resolution: '2400 × 1600'
@@ -215,6 +240,7 @@ export const wallpapers: Wallpaper[] = [
     imageUrl: 'https://images.pexels.com/photos/1402787/pexels-photo-1402787.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
     views: 6321,
     likes: 1087,
+    downloads: 2950,
     featured: true,
     dateAdded: 'April 29, 2023',
     resolution: '2560 × 1707'
@@ -230,6 +256,7 @@ export const wallpapers: Wallpaper[] = [
     imageUrl: 'https://images.pexels.com/photos/13123600/pexels-photo-13123600.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
     views: 5897,
     likes: 943,
+    downloads: 2780,
     featured: false,
     dateAdded: 'May 12, 2023',
     resolution: '2400 × 1600'
@@ -247,6 +274,7 @@ export const wallpapers: Wallpaper[] = [
     imageUrl: 'https://images.pexels.com/photos/3954431/pexels-photo-3954431.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
     views: 7845,
     likes: 1456,
+    downloads: 3200,
     featured: true,
     dateAdded: 'June 2, 2023',
     resolution: '2800 × 1867'
@@ -264,6 +292,7 @@ export const wallpapers: Wallpaper[] = [
     imageUrl: 'https://images.pexels.com/photos/2920064/pexels-photo-2920064.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
     views: 8624,
     likes: 1672,
+    downloads: 3300,
     featured: true,
     dateAdded: 'March 8, 2023',
     resolution: '2560 × 1707'
@@ -281,6 +310,7 @@ export const wallpapers: Wallpaper[] = [
     imageUrl: 'https://images.pexels.com/photos/1082655/pexels-photo-1082655.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
     views: 7219,
     likes: 1324,
+    downloads: 2500,
     featured: false,
     dateAdded: 'July 4, 2023',
     resolution: '2400 × 1600'
@@ -296,6 +326,7 @@ export const wallpapers: Wallpaper[] = [
     imageUrl: 'https://images.pexels.com/photos/3764984/pexels-photo-3764984.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
     views: 6852,
     likes: 1289,
+    downloads: 2650,
     featured: true,
     dateAdded: 'June 15, 2023',
     resolution: '2560 × 1707'

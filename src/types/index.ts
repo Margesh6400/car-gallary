@@ -17,6 +17,7 @@ export interface Wallpaper {
   imageUrl: string;
   views: number;
   likes: number;
+  downloads: number;
   featured?: boolean;
   dateAdded?: string;
   resolution?: string;
