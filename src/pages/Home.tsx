@@ -10,33 +10,33 @@ const Home: React.FC = () => {
   const latestWallpapers = getLatestWallpapers();
 
   return (
-    <div>
+    <div className="relative">
       {/* Hero Section */}
       <Hero />
       
       {/* Featured Wallpapers */}
-      <section className="py-16 bg-dark-400">
+      <section className="relative py-16 bg-dark-400">
         <div className="container-custom">
-          <h2 className="text-3xl font-medium mb-2">Featured Wallpapers</h2>
-          <p className="text-gray-400 mb-8">Hand-picked collection of stunning car imagery</p>
+          <h2 className="mb-2 text-3xl font-medium">Featured Wallpapers</h2>
+          <p className="mb-8 text-gray-400">Hand-picked collection of stunning car imagery</p>
           <Gallery wallpapers={featuredWallpapers} />
         </div>
       </section>
       
       {/* Categories */}
-      <section className="py-16 bg-dark-300">
+      <section className="relative py-16 bg-dark-300">
         <div className="container-custom">
-          <h2 className="text-3xl font-medium mb-2">Browse by Category</h2>
-          <p className="text-gray-400 mb-8">Explore our collections organized by car type</p>
+          <h2 className="mb-2 text-3xl font-medium">Browse by Category</h2>
+          <p className="mb-8 text-gray-400">Explore our collections organized by car type</p>
           <CategoryList />
         </div>
       </section>
       
       {/* Latest Additions */}
-      <section className="py-16 bg-dark-400">
+      <section className="relative py-16 bg-dark-400">
         <div className="container-custom">
-          <h2 className="text-3xl font-medium mb-2">Latest Additions</h2>
-          <p className="text-gray-400 mb-8">Newly added to our growing collection</p>
+          <h2 className="mb-2 text-3xl font-medium">Latest Additions</h2>
+          <p className="mb-8 text-gray-400">Newly added to our growing collection</p>
           <Gallery wallpapers={latestWallpapers} compact={true} />
         </div>
       </section>

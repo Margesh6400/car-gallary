@@ -49,11 +49,11 @@ const WallpaperPage: React.FC = () => {
   return (
     <div>
       {/* Wallpaper Showcase */}
-      <div className="relative bg-dark-500 overflow-hidden">
-        <div className="container-custom py-8">
+      <div className="relative overflow-hidden bg-dark-500">
+        <div className="py-8 container-custom">
           <Link 
             to={`/category/${wallpaper.categoryId}`} 
-            className="inline-flex items-center text-gray-300 hover:text-white mb-6 transition-colors"
+            className="inline-flex items-center mb-6 text-gray-300 transition-colors hover:text-white"
           >
             <ChevronLeft size={20} />
             <span>Back to {wallpaper.category}</span>
@@ -76,7 +76,7 @@ const WallpaperPage: React.FC = () => {
               <img
                 src={wallpaper.imageUrl}
                 alt={wallpaper.title}
-                className="w-full h-full object-contain"
+                className="object-contain w-full h-full"
                 onLoad={() => setImageLoaded(true)}
                 style={{ opacity: imageLoaded ? 1 : 0 }}
               />
@@ -84,19 +84,19 @@ const WallpaperPage: React.FC = () => {
             
             {/* Actions Overlay */}
             <div className="absolute bottom-0 left-0 right-0 p-6 glass-effect">
-              <div className="flex flex-col sm:flex-row justify-between sm:items-center">
+              <div className="flex flex-col justify-between sm:flex-row sm:items-center">
                 <div>
-                  <h1 className="text-2xl sm:text-3xl font-bold text-white">
+                  <h1 className="text-2xl font-bold text-white sm:text-3xl">
                     {wallpaper.title}
                   </h1>
-                  <p className="text-gray-300 mt-1">
+                  <p className="mt-1 text-gray-300">
                     {wallpaper.make} {wallpaper.model} • {wallpaper.year}
                   </p>
                 </div>
                 
-                <div className="flex mt-4 sm:mt-0 space-x-3">
+                <div className="flex mt-4 space-x-3 sm:mt-0">
                   <button
-                    className="btn btn-secondary flex items-center"
+                    className="flex items-center btn btn-secondary"
                     onClick={() => setShowDetails(!showDetails)}
                   >
                     <Info size={18} className="mr-2" />
@@ -110,7 +110,7 @@ const WallpaperPage: React.FC = () => {
                   </button>
                   <button
                     onClick={() => setShowDownloadModal(true)}
-                    className="btn btn-primary flex items-center"
+                    className="flex items-center btn btn-primary"
                   >
                     <Download size={18} className="mr-2" />
                     Download
@@ -195,7 +195,7 @@ const WallpaperPage: React.FC = () => {
       {/* Related Wallpapers */}
       <section className="py-16 bg-dark-400">
         <div className="container-custom">
-          <h2 className="text-3xl font-medium mb-8">You Might Also Like</h2>
+          <h2 className="mb-8 text-3xl font-medium">You Might Also Like</h2>
           <Gallery wallpapers={relatedWallpapers} compact={true} />
         </div>
       </section>

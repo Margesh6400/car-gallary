@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link, NavLink, useLocation } from 'react-router-dom';
-import { Menu, X, Car, ChevronDown, Sparkles } from 'lucide-react';
+import { Menu, X, ChevronDown } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { categories } from '../data/carData';
 
@@ -18,7 +18,7 @@ const Header: React.FC = () => {
   // Handle scroll event to change header background
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50); // Increased threshold for more subtle transition
+      setIsScrolled(window.scrollY > 50);
     };
 
     window.addEventListener('scroll', handleScroll);
@@ -48,59 +48,152 @@ const Header: React.FC = () => {
               className="relative flex items-center space-x-3 text-white group"
             >
               <div className="relative">
+                {/* Logo Background Effect */}
+                <div className="absolute inset-0 rounded-full bg-gradient-to-r from-primary-600 to-primary-400 blur-2xl opacity-20 animate-pulse" />
+                
+                {/* Custom SVG Logo */}
                 <motion.div
-                  className="relative z-10"
+                  className="relative z-10 p-3 border rounded-full bg-gradient-to-br from-dark-800 to-dark-900 border-primary-500/20"
                   animate={{
-                    rotate: [0, 15, -15, 0],
+                    rotate: [0, -5, 5, 0],
                   }}
                   transition={{
                     duration: 4,
                     repeat: Infinity,
-                    repeatType: "reverse",
                     ease: "easeInOut"
                   }}
                 >
-                  <Car className="w-8 h-8 text-primary-500" strokeWidth={1.5} />
-                  {/* Glow effect */}
-                  <div className="absolute inset-0 rounded-full bg-primary-500/20 blur-lg -z-10" />
-                </motion.div>
-                <motion.div
-                  className="absolute -top-1 -right-1"
-                  animate={{
-                    scale: [1, 1.4, 1],
-                    opacity: [0.5, 1, 0.5],
-                  }}
-                  transition={{
-                    duration: 2,
-                    repeat: Infinity,
-                    repeatType: "reverse",
-                    ease: "easeInOut"
-                  }}
-                >
-                  <Sparkles className="w-4 h-4 text-primary-400" />
+                  {/* Speed Lines */}
+                  <div className="absolute inset-0 -m-1">
+                    <motion.div
+                      className="w-full h-full border-2 border-dashed rounded-full border-primary-400/30"
+                      animate={{ rotate: [0, 360] }}
+                      transition={{
+                        duration: 20,
+                        repeat: Infinity,
+                        ease: "linear"
+                      }}
+                    />
+                  </div>
+
+                  {/* Custom Car SVG */}
+                  <div className="relative w-7 h-7">
+                    <motion.svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="w-full h-full"
+                    >
+                      <motion.path
+                        d="M3 12h18"
+                        stroke="currentColor"
+                        strokeWidth="1.5"
+                        strokeLinecap="round"
+                        className="text-primary-400"
+                        initial={{ pathLength: 0 }}
+                        animate={{ pathLength: 1 }}
+                        transition={{
+                          duration: 1.5,
+                          ease: "easeInOut",
+                          delay: 0.2
+                        }}
+                      />
+                      <motion.path
+                        d="M16.5 7.5L19 12l-2.5 4.5M7.5 7.5L5 12l2.5 4.5"
+                        stroke="currentColor"
+                        strokeWidth="1.5"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        className="text-primary-400"
+                        initial={{ pathLength: 0 }}
+                        animate={{ pathLength: 1 }}
+                        transition={{
+                          duration: 1.5,
+                          ease: "easeInOut",
+                          delay: 0.4
+                        }}
+                      />
+                      <motion.path
+                        d="M7.5 12c0-2.5 2-4.5 4.5-4.5s4.5 2 4.5 4.5-2 4.5-4.5 4.5-4.5-2-4.5-4.5z"
+                        stroke="currentColor"
+                        strokeWidth="1.5"
+                        className="text-primary-400"
+                        initial={{ pathLength: 0 }}
+                        animate={{ pathLength: 1 }}
+                        transition={{
+                          duration: 2,
+                          ease: "easeInOut",
+                          delay: 0.6
+                        }}
+                      />
+                      <motion.circle
+                        cx="12"
+                        cy="12"
+                        r="2"
+                        fill="currentColor"
+                        className="text-primary-400"
+                        initial={{ scale: 0 }}
+                        animate={{ scale: 1 }}
+                        transition={{
+                          duration: 0.5,
+                          ease: "backOut",
+                          delay: 1
+                        }}
+                      />
+                    </motion.svg>
+
+                    {/* Accent Dot */}
+                    <motion.div
+                      className="absolute w-2 h-2 rounded-full -right-1 -top-1 bg-primary-400"
+                      animate={{
+                        scale: [1, 1.5, 1],
+                        opacity: [0.5, 1, 0.5]
+                      }}
+                      transition={{
+                        duration: 2,
+                        repeat: Infinity,
+                        repeatType: "reverse"
+                      }}
+                    />
+                  </div>
                 </motion.div>
               </div>
-              <div className="flex items-center space-x-1">
-                <motion.span 
-                  className="text-2xl font-bold text-transparent bg-gradient-to-r from-primary-400 via-primary-500 to-primary-600 bg-clip-text"
+              
+              {/* Logo Text */}
+              <div className="flex items-baseline space-x-1">
+                <motion.div
+                  className="relative"
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: 0.2 }}
                 >
-                  Velocity
-                </motion.span>
+                  <span className="text-2xl font-bold text-transparent bg-gradient-to-r from-primary-300 via-primary-400 to-primary-300 bg-clip-text">
+                    Torque
+                  </span>
+                  {/* Animated underline */}
+                  <motion.div 
+                    className="absolute -bottom-0.5 left-0 h-[2px] bg-primary-500/50"
+                    initial={{ width: "0%" }}
+                    animate={{ width: "100%" }}
+                    transition={{
+                      duration: 0.8,
+                      ease: "easeOut",
+                      delay: 0.5
+                    }}
+                  />
+                </motion.div>
                 <motion.span
-                  className="text-2xl font-light text-white/80"
+                  className="text-2xl font-medium text-white/90"
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: 0.3 }}
                 >
-                  Vista
+                  View
                 </motion.span>
               </div>
             </Link>
           </motion.div>
-
+          
           {/* Desktop Navigation */}
           <nav className="items-center hidden space-x-8 md:flex">
             <NavLink 
