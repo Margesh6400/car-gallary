@@ -177,6 +177,70 @@ export const wallpapers: Wallpaper[] = [
     dateAdded: 'May 8, 2023',
     resolution: '2560 × 1707'
   },
+  {
+    id: 'german-5',
+    title: 'Cyberpunk BMW in Neon Night',
+    make: 'BMW',
+    model: 'M5',
+    year: 2023,
+    category: 'German',
+    categoryId: 'german',
+    imageUrl: 'https://sdmntprsouthcentralus.oaiusercontent.com/files/00000000-82f8-61f7-9318-1f70faabecf3/raw?se=2025-05-08T14%3A06%3A05Z&sp=r&sv=2024-08-04&sr=b&scid=00000000-0000-0000-0000-000000000000&skoid=61180a4f-34a9-42b7-b76d-9ca47d89946d&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-05-08T12%3A45%3A55Z&ske=2025-05-09T12%3A45%3A55Z&sks=b&skv=2024-08-04&sig=Ud7YxPT5BueMB0mP%2B9/FCYhbfu/nbNSFz3c5Q5Vu7GE%3D', // You'll need to save the image to your project
+    views: 3865,
+    likes: 982,
+    downloads: 1543,
+    featured: true,
+    dateAdded: 'May 8, 2025',
+    resolution: '2048 × 2048'
+  },
+  {
+    id: 'german-6',
+    title: 'BMW M3 Competition Blue',
+    make: 'BMW',
+    model: 'M3 Competition',
+    year: 2022,
+    category: 'German',
+    categoryId: 'german',
+    imageUrl: 'https://sdmntprsouthcentralus.oaiusercontent.com/files/00000000-f6ec-61f7-a91c-184ccce5b9ce/raw?se=2025-05-08T14%3A06%3A06Z&sp=r&sv=2024-08-04&sr=b&scid=00000000-0000-0000-0000-000000000000&skoid=61180a4f-34a9-42b7-b76d-9ca47d89946d&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-05-08T10%3A39%3A25Z&ske=2025-05-09T10%3A39%3A25Z&sks=b&skv=2024-08-04&sig=bE59tL1YvZqc/hgUtTSLnPEJ%2Bm/7DjWxbtnA6t9XiOo%3D',
+    views: 3600,
+    likes: 780,
+    downloads: 1500,
+    featured: false,
+    dateAdded: 'May 8, 2024',
+    resolution: '2048 × 2048'
+  },
+  {
+    id: 'german-7',
+    title: 'Audi RS6 Avant Grey',
+    make: 'Audi',
+    model: 'RS6 Avant',
+    year: 2023,
+    category: 'German',
+    categoryId: 'german',
+    imageUrl: 'https://sdmntprsouthcentralus.oaiusercontent.com/files/00000000-363c-61f7-ac05-8f55a6342874/raw?se=2025-05-08T14%3A06%3A06Z&sp=r&sv=2024-08-04&sr=b&scid=b29328c5-5b6c-58b1-9fc3-c05355aa220b&skoid=51916beb-8d6a-49b8-8b29-ca48ed86557e&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-05-08T01%3A17%3A30Z&ske=2025-05-09T01%3A17%3A30Z&sks=b&skv=2024-08-04&sig=4exhPDauZ20iTkoyRZFA2iAvs79oUgYdm1SQXnoNPbo%3D',
+    views: 3400,
+    likes: 720,
+    downloads: 1300,
+    featured: false,
+    dateAdded: 'May 8, 2024',
+    resolution: '2048 × 2048'
+  },
+  {
+    id: 'german-8',
+    title: 'Mercedes-Benz S-Class Black',
+    make: 'Mercedes-Benz',
+    model: 'S-Class',
+    year: 2023,
+    category: 'German',
+    categoryId: 'german',
+    imageUrl: 'https://sdmntprsouthcentralus.oaiusercontent.com/files/00000000-331c-61f7-b736-22369eba5c3c/raw?se=2025-05-08T14%3A58%3A25Z&sp=r&sv=2024-08-04&sr=b&scid=37d311e2-ad5e-5f4e-a497-4245b1564633&skoid=51916beb-8d6a-49b8-8b29-ca48ed86557e&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-05-08T01%3A13%3A50Z&ske=2025-05-09T01%3A13%3A50Z&sks=b&skv=2024-08-04&sig=3AJ%2BJttVcM2fgTw3l8RER4f2S74epl191AnMfn7UYo0%3D',
+    views: 3300,
+    likes: 700,
+    downloads: 1200,
+    featured: false,
+    dateAdded: 'May 8, 2024',
+    resolution: '2048 × 2048'
+  },
   
   // Sports Cars
   {
@@ -227,6 +291,22 @@ export const wallpapers: Wallpaper[] = [
     dateAdded: 'May 17, 2023',
     resolution: '2400 × 1600'
   },
+  {
+    id: 'sports-4',
+    title: 'Ferrari SF90 Stradale Red',
+    make: 'Ferrari',
+    model: 'SF90 Stradale',
+    year: 2023,
+    category: 'Sports',
+    categoryId: 'sports',
+    imageUrl: 'https://sdmntprsouthcentralus.oaiusercontent.com/files/00000000-ca90-61f7-b277-b7238479ecec/raw?se=2025-05-08T14%3A06%3A05Z&sp=r&sv=2024-08-04&sr=b&scid=6e318280-fd5d-57fc-a33d-94e87a2b5f6d&skoid=51916beb-8d6a-49b8-8b29-ca48ed86557e&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-05-08T01%3A16%3A30Z&ske=2025-05-09T01%3A16%3A30Z&sks=b&skv=2024-08-04&sig=EFKvIbMhGn%2BT72ayYefLquFM4HmLmyAL9cZqNUdflT8%3D',
+    views: 3200,
+    likes: 670,
+    downloads: 1400,
+    featured: false,
+    dateAdded: 'May 8, 2024',
+    resolution: '2560 × 1707'
+  },
   
   // Luxury Cars
   {
@@ -261,6 +341,22 @@ export const wallpapers: Wallpaper[] = [
     dateAdded: 'May 12, 2023',
     resolution: '2400 × 1600'
   },
+  {
+    id: 'luxury-3',
+    title: 'Lexus LC500 Silver Coupe',
+    make: 'Lexus',
+    model: 'LC500',
+    year: 2022,
+    category: 'Luxury',
+    categoryId: 'luxury',
+    imageUrl: 'https://sdmntprsouthcentralus.oaiusercontent.com/files/00000000-394c-61f7-8bd2-617243a9a101/raw?se=2025-05-08T14%3A06%3A05Z&sp=r&sv=2024-08-04&sr=b&scid=8577fe91-9534-5ee0-a09a-d086f1ea89b8&skoid=51916beb-8d6a-49b8-8b29-ca48ed86557e&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-05-08T01%3A15%3A04Z&ske=2025-05-09T01%3A15%3A04Z&sks=b&skv=2024-08-04&sig=KgoXHG8au0VQZP5S8rqdmELlCx8/qaG/xvwXN/ZZJ0g%3D',
+    views: 4100,
+    likes: 850,
+    downloads: 2000,
+    featured: false,
+    dateAdded: 'May 8, 2024',
+    resolution: '2560 × 1707'
+  },
   
   // Concept Cars
   {
@@ -278,6 +374,22 @@ export const wallpapers: Wallpaper[] = [
     featured: true,
     dateAdded: 'June 2, 2023',
     resolution: '2800 × 1867'
+  },
+  {
+    id: 'concept-2',
+    title: 'BMW Vision Next Concept',
+    make: 'BMW',
+    model: 'Vision Next',
+    year: 2024,
+    category: 'Concept',
+    categoryId: 'concept',
+    imageUrl: 'https://sdmntprsouthcentralus.oaiusercontent.com/files/00000000-5a28-61f7-900f-e91173d471b9/raw?se=2025-05-08T14%3A06%3A05Z&sp=r&sv=2024-08-04&sr=b&scid=65eebaa7-427a-50be-a426-92b6ebc430e4&skoid=51916beb-8d6a-49b8-8b29-ca48ed86557e&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-05-08T12%3A19%3A44Z&ske=2025-05-09T12%3A19%3A44Z&sks=b&skv=2024-08-04&sig=kqyqv5RR2v6gXIjG%2BF6UlvvZKVi8m2uvgqks9JkI/EU%3D',
+    views: 3500,
+    likes: 700,
+    downloads: 1200,
+    featured: false,
+    dateAdded: 'May 8, 2024',
+    resolution: '2560 × 1707'
   },
   
   // JDM Cars
@@ -330,6 +442,118 @@ export const wallpapers: Wallpaper[] = [
     featured: true,
     dateAdded: 'June 15, 2023',
     resolution: '2560 × 1707'
+  },
+  {
+    id: 'german-9',
+    title: 'BMW i8 Roadster Orange',
+    make: 'BMW',
+    model: 'i8 Roadster',
+    year: 2021,
+    category: 'German',
+    categoryId: 'german',
+    imageUrl: 'https://sdmntprwestus.oaiusercontent.com/files/00000000-ebd0-6230-8283-4f386918c6b5/raw?se=2025-05-08T14%3A58%3A39Z&sp=r&sv=2024-08-04&sr=b&scid=0b705260-fbd3-5872-b4a7-55a18bf183bc&skoid=51916beb-8d6a-49b8-8b29-ca48ed86557e&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-05-08T01%3A17%3A34Z&ske=2025-05-09T01%3A17%3A34Z&sks=b&skv=2024-08-04&sig=tUcNlMkdW3CYPzQfXqRUKY72fG3NJ1v4aIXWbtW%2B5xU%3D',
+    views: 3200,
+    likes: 690,
+    downloads: 1200,
+    featured: false,
+    dateAdded: 'May 8, 2024',
+    resolution: '2048 × 2048'
+  },
+  {
+    id: 'german-10',
+    title: 'BMW X6 M Competition White',
+    make: 'BMW',
+    model: 'X6 M Competition',
+    year: 2022,
+    category: 'German',
+    categoryId: 'german',
+    imageUrl: 'https://sdmntprwestus.oaiusercontent.com/files/00000000-039c-6230-979d-8c705a05b714/raw?se=2025-05-08T14%3A58%3A58Z&sp=r&sv=2024-08-04&sr=b&scid=137ebb6e-7a97-5357-8dab-4f14e46d4f5f&skoid=51916beb-8d6a-49b8-8b29-ca48ed86557e&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-05-08T01%3A16%3A19Z&ske=2025-05-09T01%3A16%3A19Z&sks=b&skv=2024-08-04&sig=FV89OUj0vHXtKSZR/cI2qraxbMWlLFciv0w4zlXrj%2BQ%3D',
+    views: 3100,
+    likes: 670,
+    downloads: 1100,
+    featured: false,
+    dateAdded: 'May 8, 2024',
+    resolution: '2048 × 2048'
+  },
+  {
+    id: 'german-11',
+    title: 'BMW Z4 Convertible Blue',
+    make: 'BMW',
+    model: 'Z4 Convertible',
+    year: 2023,
+    category: 'German',
+    categoryId: 'german',
+    imageUrl: 'https://sdmntprwestus.oaiusercontent.com/files/00000000-15c4-6230-b3fe-3feeb1f797c9/raw?se=2025-05-08T14%3A58%3A58Z&sp=r&sv=2024-08-04&sr=b&scid=68bdb798-5beb-5e17-a092-951f6c572833&skoid=51916beb-8d6a-49b8-8b29-ca48ed86557e&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-05-08T11%3A06%3A49Z&ske=2025-05-09T11%3A06%3A49Z&sks=b&skv=2024-08-04&sig=Y5763ml/XMpdjA4yCzK7UHIp9tSsuv0cISY0ibaaFzw%3D',
+    views: 3000,
+    likes: 650,
+    downloads: 1000,
+    featured: false,
+    dateAdded: 'May 8, 2024',
+    resolution: '2048 × 2048'
+  },
+  {
+    id: 'german-12',
+    title: 'BMW 7 Series Black',
+    make: 'BMW',
+    model: '7 Series',
+    year: 2023,
+    category: 'German',
+    categoryId: 'german',
+    imageUrl: 'https://sdmntprwestus.oaiusercontent.com/files/00000000-ae50-6230-a23f-a595270aa911/raw?se=2025-05-08T14%3A58%3A58Z&sp=r&sv=2024-08-04&sr=b&scid=00000000-0000-0000-0000-000000000000&skoid=61180a4f-34a9-42b7-b76d-9ca47d89946d&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-05-08T12%3A45%3A51Z&ske=2025-05-09T12%3A45%3A51Z&sks=b&skv=2024-08-04&sig=PR1Tovyp8FQgDiMJflvlud1EItrQj%2B/9d/UmgRUJZjo%3D',
+    views: 2950,
+    likes: 640,
+    downloads: 950,
+    featured: false,
+    dateAdded: 'May 8, 2024',
+    resolution: '2048 × 2048'
+  },
+  {
+    id: 'german-13',
+    title: 'BMW X5 M50i Silver',
+    make: 'BMW',
+    model: 'X5 M50i',
+    year: 2022,
+    category: 'German',
+    categoryId: 'german',
+    imageUrl: 'https://sdmntprwestus.oaiusercontent.com/files/00000000-6f18-6230-8b01-8ae8070ceccc/raw?se=2025-05-08T14%3A58%3A58Z&sp=r&sv=2024-08-04&sr=b&scid=e9414ecd-e06c-512b-9dad-83555aac9015&skoid=51916beb-8d6a-49b8-8b29-ca48ed86557e&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-05-08T01%3A15%3A09Z&ske=2025-05-09T01%3A15%3A09Z&sks=b&skv=2024-08-04&sig=kb%2B7%2BYNhaBSa9P6TMjNZiyWLm4IEj2U7SPOvlvqbqy0%3D',
+    views: 2850,
+    likes: 620,
+    downloads: 900,
+    featured: false,
+    dateAdded: 'May 8, 2024',
+    resolution: '2048 × 2048'
+  },
+  {
+    id: 'german-14',
+    title: 'BMW 5 Series Touring Blue',
+    make: 'BMW',
+    model: '5 Series Touring',
+    year: 2021,
+    category: 'German',
+    categoryId: 'german',
+    imageUrl: 'https://sdmntprnorthcentralus.oaiusercontent.com/files/00000000-e97c-622f-ae13-fbee3373ddda/raw?se=2025-05-08T14%3A58%3A58Z&sp=r&sv=2024-08-04&sr=b&scid=00000000-0000-0000-0000-000000000000&skoid=61180a4f-34a9-42b7-b76d-9ca47d89946d&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-05-08T11%3A47%3A57Z&ske=2025-05-09T11%3A47%3A57Z&sks=b&skv=2024-08-04&sig=keSc2yUbkpfmzmBXv6yQQxbGe5mlvfyROLS1ljiOQis%3D',
+    views: 2750,
+    likes: 600,
+    downloads: 850,
+    featured: false,
+    dateAdded: 'May 8, 2024',
+    resolution: '2048 × 2048'
+  },
+  {
+    id: 'german-15',
+    title: 'BMW M5 Competition Black',
+    make: 'BMW',
+    model: 'M5 Competition',
+    year: 2022,
+    category: 'German',
+    categoryId: 'german',
+    imageUrl: 'https://sdmntprnorthcentralus.oaiusercontent.com/files/00000000-92e4-622f-970c-3ae42ecf3af3/raw?se=2025-05-08T14%3A59%3A00Z&sp=r&sv=2024-08-04&sr=b&scid=00000000-0000-0000-0000-000000000000&skoid=61180a4f-34a9-42b7-b76d-9ca47d89946d&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-05-08T12%3A17%3A33Z&ske=2025-05-09T12%3A17%3A33Z&sks=b&skv=2024-08-04&sig=ZOsQBgfZboo3KahV05CDPoZtbZ4xOkN7dJNHRX%2B5ioc%3D',
+    views: 2650,
+    likes: 590,
+    downloads: 800,
+    featured: false,
+    dateAdded: 'May 8, 2024',
+    resolution: '2048 × 2048'
   },
 ];
 

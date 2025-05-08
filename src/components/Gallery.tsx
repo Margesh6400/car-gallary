@@ -31,10 +31,11 @@ const Gallery: React.FC<GalleryProps> = ({ wallpapers, title, compact = false })
       initial="hidden"
       animate="show"
       variants={container}
+      className="w-full"
     >
       {title && (
         <motion.h2 
-          className="text-2xl md:text-3xl font-medium mb-6 text-gray-100"
+          className="mb-6 text-2xl font-medium text-gray-100 md:text-3xl"
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
@@ -44,12 +45,23 @@ const Gallery: React.FC<GalleryProps> = ({ wallpapers, title, compact = false })
       )}
       
       <motion.div 
-        className={`grid grid-cols-1 ${compact ? 'sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4' : 'sm:grid-cols-2 lg:grid-cols-3'} gap-6`}
+        className={`grid gap-4 sm:gap-6 ${
+          compact 
+            ? 'grid-cols-1 xs:grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6' 
+            : 'grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4'
+        }`}
         variants={container}
       >
         {wallpapers.map((wallpaper) => (
-          <motion.div key={wallpaper.id} variants={item}>
-            <Link to={`/wallpaper/${wallpaper.id}`}>
+          <motion.div 
+            key={wallpaper.id} 
+            variants={item}
+            className="flex"
+          >
+            <Link 
+              to={`/wallpaper/${wallpaper.id}`}
+              className="w-full"
+            >
               <WallpaperCard wallpaper={wallpaper} compact={compact} />
             </Link>
           </motion.div>
@@ -63,8 +75,8 @@ const Gallery: React.FC<GalleryProps> = ({ wallpapers, title, compact = false })
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5 }}
         >
-          <p className="text-gray-400 text-lg mb-4">No wallpapers found in this collection.</p>
-          <Link to="/" className="text-primary-500 hover:text-primary-400 transition-colors">
+          <p className="mb-4 text-lg text-gray-400">No wallpapers found in this collection.</p>
+          <Link to="/" className="transition-colors text-primary-500 hover:text-primary-400">
             Browse all collections
           </Link>
         </motion.div>
