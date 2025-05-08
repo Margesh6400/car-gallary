@@ -1,20 +1,42 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useParams, Link, useNavigate } from 'react-router-dom';
 import { ChevronLeft, Download, Heart, Share2, Info, X } from 'lucide-react';
 import Gallery from '../components/Gallery';
+import DownloadModal from '../components/DownloadModal';
 import { getWallpaperById, getRelatedWallpapers } from '../data/carData';
 
 const WallpaperPage: React.FC = () => {
   const { wallpaperId } = useParams<{ wallpaperId: string }>();
   const navigate = useNavigate();
   const [showDetails, setShowDetails] = useState(false);
+  const [showDownloadModal, setShowDownloadModal] = useState(false);
+  const [imageLoaded, setImageLoaded] = useState(false);
+  const [imageHeight, setImageHeight] = useState<number | null>(null);
   
   // Get wallpaper and related ones
   const wallpaper = getWallpaperById(wallpaperId || '');
   const relatedWallpapers = wallpaper ? getRelatedWallpapers(wallpaper.id, wallpaper.category) : [];
   
+  // Handle image load and resize
+  useEffect(() => {
+    const updateImageHeight = () => {
+      if (!imageLoaded) return;
+      
+      const headerHeight = 80; // Approximate header height
+      const containerPadding = 64; // py-8 * 2 = 64px
+      const availableHeight = window.innerHeight - headerHeight - containerPadding;
+      
+      setImageHeight(availableHeight);
+    };
+
+    window.addEventListener('resize', updateImageHeight);
+    updateImageHeight();
+
+    return () => window.removeEventListener('resize', updateImageHeight);
+  }, [imageLoaded]);
+
   // If wallpaper doesn't exist, navigate to 404
-  React.useEffect(() => {
+  useEffect(() => {
     if (!wallpaper && wallpaperId) {
       navigate('/not-found');
     }
@@ -37,12 +59,28 @@ const WallpaperPage: React.FC = () => {
             <span>Back to {wallpaper.category}</span>
           </Link>
           
-          <div className="relative overflow-hidden rounded-lg shadow-2xl">
-            <img
-              src={wallpaper.imageUrl}
-              alt={wallpaper.title}
-              className="w-full object-cover"
-            />
+          <div className="relative overflow-hidden rounded-lg shadow-2xl bg-dark-400">
+            {/* Loading skeleton */}
+            {!imageLoaded && (
+              <div className="absolute inset-0 bg-dark-300 animate-pulse" />
+            )}
+            
+            <div 
+              className="relative flex items-center justify-center"
+              style={{ 
+                height: imageHeight ? `${imageHeight}px` : '70vh',
+                minHeight: '400px',
+                maxHeight: '80vh'
+              }}
+            >
+              <img
+                src={wallpaper.imageUrl}
+                alt={wallpaper.title}
+                className="w-full h-full object-contain"
+                onLoad={() => setImageLoaded(true)}
+                style={{ opacity: imageLoaded ? 1 : 0 }}
+              />
+            </div>
             
             {/* Actions Overlay */}
             <div className="absolute bottom-0 left-0 right-0 p-6 glass-effect">
@@ -70,15 +108,13 @@ const WallpaperPage: React.FC = () => {
                   <button className="btn btn-secondary">
                     <Heart size={18} />
                   </button>
-                  <a 
-                    href={wallpaper.imageUrl} 
-                    target="_blank" 
-                    rel="noopener noreferrer"
+                  <button
+                    onClick={() => setShowDownloadModal(true)}
                     className="btn btn-primary flex items-center"
                   >
                     <Download size={18} className="mr-2" />
                     Download
-                  </a>
+                  </button>
                 </div>
               </div>
             </div>
@@ -86,23 +122,30 @@ const WallpaperPage: React.FC = () => {
         </div>
       </div>
       
+      {/* Download Modal */}
+      <DownloadModal
+        wallpaper={wallpaper}
+        isOpen={showDownloadModal}
+        onClose={() => setShowDownloadModal(false)}
+      />
+      
       {/* Details Panel */}
       {showDetails && (
-        <div className="bg-dark-300 py-8 animate-fadeIn">
+        <div className="py-8 bg-dark-300 animate-fadeIn">
           <div className="container-custom">
-            <div className="flex justify-between items-center mb-6">
+            <div className="flex items-center justify-between mb-6">
               <h2 className="text-2xl font-medium">Wallpaper Details</h2>
               <button 
                 onClick={() => setShowDetails(false)}
-                className="text-gray-400 hover:text-white transition-colors"
+                className="text-gray-400 transition-colors hover:text-white"
               >
                 <X size={24} />
               </button>
             </div>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
               <div>
-                <h3 className="text-lg font-medium mb-4">Car Information</h3>
+                <h3 className="mb-4 text-lg font-medium">Car Information</h3>
                 <ul className="space-y-3">
                   <li className="flex justify-between">
                     <span className="text-gray-400">Make:</span>
@@ -124,7 +167,7 @@ const WallpaperPage: React.FC = () => {
               </div>
               
               <div>
-                <h3 className="text-lg font-medium mb-4">Wallpaper Information</h3>
+                <h3 className="mb-4 text-lg font-medium">Wallpaper Information</h3>
                 <ul className="space-y-3">
                   <li className="flex justify-between">
                     <span className="text-gray-400">Resolution:</span>
